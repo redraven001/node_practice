@@ -24,21 +24,23 @@ console.log(path.resolve(__dirname))
 //FILE Modle (FS)
 
 //syncronus 
+const fpb = path.join('C:', 'Users', 'Asus', 'OneDrive', 'Desktop', 'codes from VS', 'web', 'node', 'nth', 'b.txt');
+const fp = path.join('C:', 'Users', 'Asus', 'OneDrive', 'Desktop', 'codes from VS', 'web', 'node', 'nth', 'a.txt');
 const {readFileSync,writeFileSync}=require('fs')
-const f=readFileSync('./web/node/nth/a.txt','utf8')
+const f=readFileSync(fp,'utf8')
 console.log(f)
-writeFileSync('./web/node/nth/a.txt','Hello bit*hes')
+writeFileSync(fp,'Hello bit*hes')
 console.log(f)
 
 //asyncronus
 const {readFile,writeFile}=require('fs')
-readFile('./web/node/nth/a.txt','utf8',(err,result)=>{
+readFile(fp,'utf8',(err,result)=>{
     if(err){
         console.log(err)
         return;
     }
     console.log(result) 
-    writeFile('./web/node/nth/b.txt','utf8fytfytv',(err,result)=>{
+    writeFile(fpb,'utf8fytfytv',(err,result)=>{
         if(err)
              return;
     })
